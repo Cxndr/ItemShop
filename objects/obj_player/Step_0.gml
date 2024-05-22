@@ -1,5 +1,7 @@
 // depth system
-//scr_tile_depth();
+scr_tile_depth();
+
+show_debug_message(layer_get_name(self.layer));
 
 // get input
 var _pressed_left = keyboard_check(ord("A"));
