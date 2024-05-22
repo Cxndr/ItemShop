@@ -1,0 +1,2 @@
+ - add icons & base price (with coin icon) to inventory menu.
+ 
