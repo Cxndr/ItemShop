@@ -1,7 +1,5 @@
 // depth system
-scr_tile_depth();
-
-show_debug_message(layer_get_name(self.layer));
+scr_tile_depth_reset();
 
 // get input
 var _pressed_left = keyboard_check(ord("A"));
@@ -122,6 +120,7 @@ if (interacting_counter != noone and interacting_counter.object_index == obj_cou
 	draw_counter_sel = true;
 	instance_destroy(counter_sel);
 	counter_sel = instance_create_layer(interacting_counter.x, interacting_counter.y, interacting_counter.layer, obj_counter_sel);
+	with (counter_sel) depth = depth-1
 	if (_interact_key)
 	{
 		with instance_create_layer(x, y, "menus", obj_menu_inventory)

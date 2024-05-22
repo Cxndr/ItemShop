@@ -14,6 +14,7 @@ interact_distance_v = 14;
 
 
 // mechanical variables
+original_depth = depth; // needed for scr_tile_depth_reset();
 xdir = 0;
 ydir = 0;
 face_dir = "down";
