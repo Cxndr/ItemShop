@@ -1,6 +1,24 @@
 // animation
 image_index = 0;
 image_speed = false;
+function set_anim(_state) 
+{
+	new_anim = variable_struct_get(anims,_state);
+	anim_frames = new_anim.frames;
+}
+
+anims = {
+	left:		{ frames: [4,3,4,5] },
+	right:		{ frames: [7,8,7,6] },
+	up:			{ frames: [10,11,10,9] },
+	down:		{ frames: [1,0,1,2] },
+	idle_left:	{ frames: [4,4,4,4,4,4,4,4,4,4,4,4,14,15,14,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4] },
+	idle_right:	{ frames: [7,7,7,7,7,7,7,7,7,7,7,7,16,17,16,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7] },
+	idle_up:	{ frames: [10] },
+	idle_down:	{ frames: [1,1,1,1,1,1,1,1,1,1,1,1,12,13,12,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] },
+};
+
+set_anim("idle_down");
 
 // settings variables
 move_speed = 1.5;
@@ -27,25 +45,6 @@ interact_point_x = x;
 interact_point_y = y;
 counter_sel = noone;
 
-// animations
-function set_anim(_state) 
-{
-	new_anim = variable_struct_get(anims,_state);
-	anim_frames = new_anim.frames;
-}
-
-anims = {
-	left:		{ frames: [4,3,4,5] },
-	right:		{ frames: [7,8,7,6] },
-	up:			{ frames: [10,11,10,9] },
-	down:		{ frames: [1,0,1,2] },
-	idle_left:	{ frames: [4,4,4,4,4,4,4,4,4,4,4,4,14,15,14,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4] },
-	idle_right:	{ frames: [7,7,7,7,7,7,7,7,7,7,7,7,16,17,16,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7] },
-	idle_up:	{ frames: [10] },
-	idle_down:	{ frames: [1,1,1,1,1,1,1,1,1,1,1,1,12,13,12,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] },
-};
-
-set_anim("idle_down");
 
 // setup inventory
 global.player_inventory = new Inventory();

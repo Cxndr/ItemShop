@@ -6,3 +6,4 @@ image_index = anim_frames[floor(current_frame)];
 
 // final output
 draw_self();
+
