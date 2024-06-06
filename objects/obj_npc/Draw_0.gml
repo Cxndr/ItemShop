@@ -8,5 +8,10 @@ image_index = anim_frames[floor(current_frame)];
 draw_self();
 
 // draw path
+//draw_set_alpha(1);
+//draw_set_color(debug_path_draw_color);
 //draw_path(path, x, y, 1);
+//draw_set_alpha(1);
+//draw_set_color(c_white);
+
 

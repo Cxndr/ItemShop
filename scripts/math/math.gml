@@ -7,3 +7,7 @@ function bound(_index, _bounds)
 	return _index;
 }
 
+function place_value(_n)
+{
+	return power(10, _n-1);	
+}

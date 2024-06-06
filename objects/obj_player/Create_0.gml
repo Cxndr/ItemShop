@@ -40,10 +40,12 @@ anim_frames = [0];
 current_frame = 0;
 passing_item = 0;
 interacting_counter = 0;
+interacting_shop_activate = 0;
 draw_counter_sel = false;
 interact_point_x = x;
 interact_point_y = y;
 counter_sel = noone;
+movement = true;
 
 
 // setup inventory

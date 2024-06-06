@@ -82,9 +82,13 @@ if place_meeting(x, y + (ydir * _move_speed), obj_solid)
 }
 
 // execute movement
-if (xdir != 0 && ydir != 0) _move_speed = move_speed * diagonal_speed;
-x = x + (xdir * _move_speed)
-y = y + (ydir * _move_speed);
+if (movement = true)
+{
+	if (xdir != 0 && ydir != 0) _move_speed = move_speed * diagonal_speed;
+	x = x + (xdir * _move_speed)
+	y = y + (ydir * _move_speed);
+}
+
 
 
 // INTERACTION COLLISIONS
@@ -133,4 +137,14 @@ else
 {
 	draw_counter_sel = false;
 	instance_destroy(counter_sel);
+}
+
+// shop activate interact
+interacting_shop_activate = instance_position(interact_point_x, interact_point_y, obj_shop)
+if (interacting_shop_activate)
+{
+	if (_interact_key)
+	{
+		obj_shop.activate_sale_period();
+	}
 }

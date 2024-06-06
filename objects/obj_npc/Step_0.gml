@@ -4,7 +4,6 @@ scr_tile_depth_reset();
 // run state machine
 state();
 
-
 // set animation
 face_dir = round_to_dir(direction);
 if (speed > 0) or (path_position != 1) {moving = true}

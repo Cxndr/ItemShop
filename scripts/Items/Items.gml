@@ -65,6 +65,7 @@ function Item () constructor
 	description = "";
 	icon = 0;
 	quantity = 1;
+	sold_price = 0; // for now used just for global.sold_items to keep track of price sold at.
 	
 }
 

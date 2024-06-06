@@ -2,6 +2,7 @@
 global.npc_move_speed_mult = 1;
 global.shopper_list = ds_list_create();
 global.in_store_shoppers = ds_list_create();
+global.in_store_shopper_objects = ds_list_create();
 
 // functions
 function reset_shopper_list()

@@ -15,6 +15,11 @@ global.shop_enter_pos_fin_y = 88;
 global.category_pos = 0;
 global.inventory_pos = 0;
 
+// game variables
+global.player_money = 100;
+global.sold_items = ds_list_create();
+global.selling_cycle_done = false;
+
 // enums
 enum FACE_DIR
 {

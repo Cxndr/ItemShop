@@ -13,3 +13,12 @@ instance_create_layer(0,0,"game_instances",obj_pause); // layer needs to be visi
 instance_create_layer(0,0,"lighting",obj_light_surface);
 instance_create_layer(0,0,"game_instances", obj_npc_manager);
 instance_create_layer(0,0,"game_instances", obj_pathway);
+instance_create_layer(0,0,"game_instances", obj_dialogue_manager);
+
+
+// setup sdf font effects
+font_enable_effects(fnt_debug, true, {
+    outlineEnable: true,
+    outlineDistance: 2,
+    outlineColour: c_black
+});

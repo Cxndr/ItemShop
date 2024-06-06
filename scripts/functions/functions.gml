@@ -7,7 +7,6 @@ function string_proper(_str)
     return _out;
 }
 
-
 function round_to_dir(_value)
 {
 	return round(_value/90)*90;

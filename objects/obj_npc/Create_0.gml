@@ -4,6 +4,9 @@ diagonal_speed = 0.75;
 anim_speed = 7;
 wait_time_min = 2 * 60;
 wait_time_max = 8 * 60;
+debug_path_draw_color = choose(
+	c_red, c_green, c_blue, c_fuchsia, c_lime, c_maroon, c_orange, c_purple, c_teal
+);
 
 // mechanical
 original_depth = depth; // needed for scr_tile_depth_reset();
@@ -19,6 +22,12 @@ counter_choice_x = 0;
 counter_choice_y = 0;
 face_counter = false;
 moving = false;
+buy_item = false;
+at_till = false;
+leave_shop = false;
+in_store_shoppers_pos = -1;
+in_store_shopper_objects_pos = -1;
+
 
 // animation
 image_index = 0;
@@ -115,9 +124,13 @@ state_browse = function()
 			var _found = false;
 			while(_found = false)
 			{
+				randomize();
 				counter_choice = _counter_list[irandom(array_length(_counter_list)-1)];
 				counter_choice_x = counter_choice.x + (obj_counter.sprite_width/2);
 				counter_choice_y = counter_choice.y + (obj_counter.sprite_height/2);
+				//show_debug_message("chosen counter: " + string(counter_choice));
+				//show_debug_message(" - " + string(counter_choice_x) + ", " + string(counter_choice_y));
+				randomize();
 				var _choose_dir = irandom(3);
 				switch(_choose_dir)
 				{
@@ -140,9 +153,10 @@ state_browse = function()
 				}
 				browse_pos_x = snap_to_grid(browse_pos_x);
 				browse_pos_y = snap_to_grid(browse_pos_y);
+				var _inst = instance_place(browse_pos_x,browse_pos_y,obj_all_chars);
 				if instance_place(browse_pos_x,browse_pos_y,obj_solid)
 				or instance_place(browse_pos_x,browse_pos_y,obj_restricted)
-				// or instance_place(browse_pos_x,browse_pos_y,obj_all_chars) // causes random freeze ???
+				//or instance_place(browse_pos_x,browse_pos_y,obj_all_chars) // causes random freeze ???
 				{
 					_found = false;
 				}
@@ -163,7 +177,7 @@ state_browse = function()
 				browse_pos_y = snap_to_grid(browse_pos_y);
 				if instance_place(browse_pos_x,browse_pos_y,obj_solid)
 				or instance_place(browse_pos_x,browse_pos_y,obj_restricted)
-				// or instance_place(browse_pos_x,browse_pos_y,obj_all_chars) // causes random freeze ???
+				//or instance_place(browse_pos_x,browse_pos_y,obj_all_chars) // causes random freeze ???
 				{
 					_found = false;
 				}
@@ -207,6 +221,84 @@ state_browse = function()
 	}
 	
 	// leave state
+	if (buy_item = true)
+	{
+		state = state_buyitem;
+		state_enter = true;
+	}
+	if (leave_shop = true)
+	{
+		state = state_leaveshop;
+		state_enter = true;
+	}
 }
+
+
+state_buyitem = function()
+{
+	// enter state
+	state_current = STATE.BUY_ITEM;
+	if state_enter == true
+	{
+		state_enter = false;
+	}
+	
+	
+	// state
+	var _till_x = obj_shop_till.x + (obj_shop_till.sprite_width/2);
+	var _till_y = obj_shop_till.y + (obj_shop_till.sprite_height/2);
+	
+	if (point_distance(x,y,_till_x,_till_y) < move_speed)
+	{
+		at_till = true;
+		x = _till_x;
+		y = _till_y;
+		direction = round_to_dir(point_direction(x,y,obj_shop_till.x,obj_shop_till.y));
+	}
+	else at_till = false;
+	
+	if at_till == false
+	{
+		target_x = _till_x;
+		target_y = _till_y;
+		target_x = snap_to_grid(target_x);
+		target_y = snap_to_grid(target_y);
+
+	}
+	else direction = round_to_dir(point_direction(x,y,obj_player.x, obj_player.y));
+	
+	// leave state
+	if (buy_item == false)
+	{
+		state = state_browse;
+		state_enter = true;
+	}
+}
+
+
+state_leaveshop = function()
+{
+	// enter state
+	state_current = STATE.LEAVE_SHOP;
+	if state_enter == true
+	{
+		state_enter = false;
+	}
+	
+	// state
+	target_x = global.shop_enter_pos_x;
+	target_y = global.shop_enter_pos_y;
+	target_x = snap_to_grid(target_x);
+	target_y = snap_to_grid(target_y);
+	
+	// leave state
+	if (point_distance(x,y,target_x, target_y) < move_speed)
+	{
+		ds_list_delete(global.in_store_shopper_objects, in_store_shopper_objects_pos);
+		transfer_shopper(global.in_store_shoppers[|in_store_shoppers_pos], global.in_store_shoppers, global.shopper_list);
+		instance_destroy();
+	}
+}
+
 
 state = state_entershop;
