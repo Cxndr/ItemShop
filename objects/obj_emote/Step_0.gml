@@ -4,5 +4,8 @@ if timer < 1
 	instance_destroy();	
 }
 
-x = speaker.x - 12;
-y = speaker.y - (speaker.sprite_height-5);
+if (instance_exists(speaker))
+{
+	x = speaker.x - 12;
+	y = speaker.y - (speaker.sprite_height-5);
+}

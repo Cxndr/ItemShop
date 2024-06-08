@@ -12,6 +12,7 @@ if (buyer_cycles_active)
 			{
 				// find shopper
 				var _shopper_count = ds_list_size(global.in_store_shoppers);
+				randomize();
 				var _selected_shopper_i = irandom(_shopper_count-1);
 				selected_shopper = global.in_store_shoppers[|_selected_shopper_i];
 				selected_shopper_obj = global.in_store_shopper_objects[|_selected_shopper_i];
@@ -20,9 +21,9 @@ if (buyer_cycles_active)
 			if (found_shopper = true) // found shopper true
 			{
 				// walk to till and buy item
-				if (selected_shopper_obj.buy_item == false)	
+				if (selected_shopper_obj.state_current != NPC_STATE.BUY_ITEM)	
 				{
-					selected_shopper_obj.buy_item = true;
+					selected_shopper_obj.state_current = NPC_STATE.BUY_ITEM;
 				}
 				if (selected_shopper_obj.at_till == true) and (sell_menu_created = false)
 				{
@@ -39,7 +40,10 @@ if (buyer_cycles_active)
 				}
 				if (global.selling_cycle_done == true)
 				{
-					selected_shopper_obj.buy_item = false;
+					//selected_shopper_obj.buy_item = false;
+					selected_shopper_obj.state_current = NPC_STATE.BROWSE;
+					selected_shopper_obj.state_enter = true;
+					selected_shopper_obj.at_till = false;
 					found_shopper = false;
 					sell_menu_created = false;
 					set_wait_timer();

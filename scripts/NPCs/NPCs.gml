@@ -1,3 +1,13 @@
+// NPC states
+enum NPC_STATE
+{
+	IDLE,
+	ENTER_SHOP,
+	BROWSE,
+	BUY_ITEM,
+	LEAVE_SHOP	
+}
+
 // globals
 global.npc_move_speed_mult = 1;
 global.shopper_list = ds_list_create();
@@ -115,7 +125,7 @@ function initiate_shoppers()
 	{
 		name = "Hoji";
 		sprite = spr_char_22;
-		move_speed = 1.1;
+		move_speed = 0.9;
 	}
 	ds_list_add(global.shopper_data, _npc)
 	

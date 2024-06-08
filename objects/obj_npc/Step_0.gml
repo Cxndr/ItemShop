@@ -2,6 +2,14 @@
 scr_tile_depth_reset();
 
 // run state machine
+switch (state_current)
+{
+	case NPC_STATE.IDLE: state = state_idle; break;
+	case NPC_STATE.ENTER_SHOP: state = state_entershop; break;
+	case NPC_STATE.BROWSE: state = state_browse; break;
+	case NPC_STATE.BUY_ITEM: state = state_buyitem; break;
+	case NPC_STATE.LEAVE_SHOP: state = state_leaveshop; break;
+}
 state();
 
 // set animation
@@ -22,6 +30,8 @@ else
 	else if (face_dir >= 90)	{ set_anim("idle_up"); }
 	else						{ set_anim("idle_right"); }
 }
+
+//show_debug_message(name + " " + string(path));
 
 
 //show_debug_message("target_x: " + string(target_x) + " target_y: " + string(target_y));

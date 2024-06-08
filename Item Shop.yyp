@@ -39,7 +39,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.4.0.137",
   },
   "name":"Item Shop",
   "resources":[
@@ -71,7 +71,6 @@
     {"id":{"name":"obj_shop_till","path":"objects/obj_shop_till/obj_shop_till.yy",},},
     {"id":{"name":"obj_shop","path":"objects/obj_shop/obj_shop.yy",},},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},},
-    {"id":{"name":"obj_textbox_import","path":"objects/obj_textbox_import/obj_textbox_import.yy",},},
     {"id":{"name":"rm_shop","path":"rooms/rm_shop/rm_shop.yy",},},
     {"id":{"name":"DialogueFunctions","path":"scripts/DialogueFunctions/DialogueFunctions.yy",},},
     {"id":{"name":"functions","path":"scripts/functions/functions.yy",},},
