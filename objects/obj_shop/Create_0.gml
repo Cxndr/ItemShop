@@ -29,6 +29,15 @@ function end_sale_period()
 
 function activate_sale_period()
 {
+	// for debug
+	show_debug_message(global.shopper_list);
+	show_debug_message("--- global.shopper_list ---");
+	for (_i=0; _i < ds_list_size(global.shopper_list); _i++)
+	{
+		show_debug_message(global.shopper_list[|_i]);	
+	}
+	show_debug_message("---------------------------");
+	
 	obj_player.movement = false;
 	//// play bell ring sound
 	
