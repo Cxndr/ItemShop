@@ -15,10 +15,3 @@ function set_variable_depth()
 
 
 
-
-
-/*
-
-
-
-*/

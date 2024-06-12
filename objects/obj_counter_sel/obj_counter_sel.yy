@@ -6,8 +6,8 @@
   "name":"obj_counter_sel",
   "overriddenProperties":[],
   "parent":{
-    "name":"Counters System",
-    "path":"folders/Counters System.yy",
+    "name":"Shop Interiors",
+    "path":"folders/Shop Interiors.yy",
   },
   "parentObjectId":null,
   "persistent":false,

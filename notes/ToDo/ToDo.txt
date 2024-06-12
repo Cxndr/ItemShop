@@ -1,2 +1,3 @@
- - add icons & base price (with coin icon) to inventory menu.
- 
+ - variable shop objects item
+ - magic pot: place on shop counter, clicking it activates shop edit mode.
+ - ledger: place on shop counter, clicking it shows shop records.

@@ -51,8 +51,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Counters System",
-    "path":"folders/Counters System.yy",
+    "name":"Shop Interiors",
+    "path":"folders/Shop Interiors.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
