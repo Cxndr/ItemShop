@@ -10,8 +10,8 @@
   "name":"obj_counter",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Counters System",
+    "path":"folders/Counters System.yy",
   },
   "parentObjectId":null,
   "persistent":false,

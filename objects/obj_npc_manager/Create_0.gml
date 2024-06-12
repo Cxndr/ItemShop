@@ -3,6 +3,11 @@ initiate_shoppers();
 
 // mechanical
 shopper_select = 0;
+enter_shoppers_count = 0;
+wait_timer = 0;
+wait_timer_lower = 20;
+wait_timer_upper = 50;
+taken_browse_locations = ds_list_create()
 
 // functions
 function enter_shopper()
@@ -32,12 +37,5 @@ function enter_shopper()
 
 function enter_shoppers(_count)
 {
-	while (_count > 0)
-	{
-		enter_shopper();
-		var _wait_timer = irandom_range(30,120);
-		while(_wait_timer > 0) _wait_timer--;
-		_count--;
-	}
-	return true;
+	enter_shoppers_count = _count;
 }

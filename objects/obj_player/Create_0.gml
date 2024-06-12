@@ -1,3 +1,5 @@
+event_inherited();
+
 // animation
 image_index = 0;
 image_speed = false;
@@ -28,11 +30,11 @@ image_yscale = 1;
 anim_speed = 7;
 corner_tolerance = 8;
 interact_distance_h = 13;
-interact_distance_v = 14; 
+interact_distance_v = 14;
+name = "Mika";
 
 
 // mechanical variables
-original_depth = depth; // needed for scr_tile_depth_reset();
 xdir = 0;
 ydir = 0;
 face_dir = "down";

@@ -1,9 +1,9 @@
 // get inputs
-up_key = keyboard_check_pressed(ord("W"));
-down_key = keyboard_check_pressed(ord("S"));
-left_key = keyboard_check_pressed(ord("A"));
-right_key = keyboard_check_pressed(ord("D"));
-select_key = keyboard_check_pressed(vk_enter);
+up_key = global.key_up_pressed;
+down_key = global.key_down_pressed;
+left_key = global.key_left_pressed;
+right_key = global.key_right_pressed;
+select_key = global.key_enter_pressed;
 
 // move through menus
 position += down_key - up_key;

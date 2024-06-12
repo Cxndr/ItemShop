@@ -1,4 +1,4 @@
-/// @description pathing
+/// @description path reset
 
 //if (path_position == 1)
 //{

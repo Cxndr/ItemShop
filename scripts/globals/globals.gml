@@ -7,7 +7,7 @@ global.shop_y = 64;
 global.shop_w = 160;
 global.shop_h = 176;
 global.shop_enter_pos_x = 136;
-global.shop_enter_pos_y = 48;
+global.shop_enter_pos_y = 38;
 global.shop_enter_pos_fin_x = 136;
 global.shop_enter_pos_fin_y = 88;
 

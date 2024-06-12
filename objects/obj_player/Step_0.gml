@@ -1,12 +1,11 @@
-// depth system
-scr_tile_depth_reset();
+event_inherited();
 
 // get input
-var _pressed_left = keyboard_check(ord("A"));
-var _pressed_right = keyboard_check(ord("D"));
-var _pressed_up = keyboard_check(ord("W"));
-var _pressed_down = keyboard_check(ord("S"));
-var _interact_key = keyboard_check_pressed(vk_enter);
+var _pressed_left = global.key_left;
+var _pressed_right = global.key_right;
+var _pressed_up = global.key_up;
+var _pressed_down = global.key_down;
+var _interact_key = global.key_enter_pressed;
 
 // get movement
 xdir = _pressed_right - _pressed_left;
@@ -14,15 +13,18 @@ ydir = _pressed_down - _pressed_up;
 var _move_speed = move_speed;
 
 // set animation
-if		(xdir == -1)			{ set_anim("left"); face_dir = "left"; }
-else if (xdir == 1)				{ set_anim("right"); face_dir = "right"; }
-else if (ydir == -1)			{ set_anim("up"); face_dir = "up"; }
-else if (ydir == 1)				{ set_anim("down"); face_dir = "down"; }
-else if (face_dir == "left")	set_anim("idle_left");
-else if (face_dir == "right")	set_anim("idle_right");
-else if (face_dir == "up")		set_anim("idle_up");
-else if (face_dir == "down")	set_anim("idle_down");
-else							set_anim("idle_down");
+if (movement == true)
+{
+	if		(xdir == -1)			{ set_anim("left"); face_dir = "left"; }
+	else if (xdir == 1)				{ set_anim("right"); face_dir = "right"; }
+	else if (ydir == -1)			{ set_anim("up"); face_dir = "up"; }
+	else if (ydir == 1)				{ set_anim("down"); face_dir = "down"; }
+	else if (face_dir == "left")	set_anim("idle_left");
+	else if (face_dir == "right")	set_anim("idle_right");
+	else if (face_dir == "up")		set_anim("idle_up");
+	else if (face_dir == "down")	set_anim("idle_down");
+	else							set_anim("idle_down");
+}
 
 // COLLISIONS
 if place_meeting(x + (xdir * _move_speed), y, obj_solid)
@@ -82,7 +84,7 @@ if place_meeting(x, y + (ydir * _move_speed), obj_solid)
 }
 
 // execute movement
-if (movement = true)
+if (movement == true)
 {
 	if (xdir != 0 && ydir != 0) _move_speed = move_speed * diagonal_speed;
 	x = x + (xdir * _move_speed)
@@ -123,7 +125,7 @@ if (interacting_counter != noone and interacting_counter.object_index == obj_cou
 {
 	draw_counter_sel = true;
 	instance_destroy(counter_sel);
-	counter_sel = instance_create_layer(interacting_counter.x, interacting_counter.y, interacting_counter.layer, obj_counter_sel);
+	counter_sel = instance_create_depth(interacting_counter.x, interacting_counter.y, interacting_counter.depth, obj_counter_sel);
 	with (counter_sel) depth = depth-1
 	if (_interact_key)
 	{

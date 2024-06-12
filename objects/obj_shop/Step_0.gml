@@ -3,7 +3,7 @@ if (buyer_cycles_active)
 {	
 	if (buyer_cycle_count > 0)
 	{
-		show_debug_message(wait_timer);
+		//  show_debug_message(wait_timer);
 		// wait period
 		if (wait_timer > 0) wait_timer--;
 		else
@@ -24,6 +24,7 @@ if (buyer_cycles_active)
 				if (selected_shopper_obj.state_current != NPC_STATE.BUY_ITEM)	
 				{
 					selected_shopper_obj.state_current = NPC_STATE.BUY_ITEM;
+					selected_shopper_obj.state_enter = true;
 				}
 				if (selected_shopper_obj.at_till == true) and (sell_menu_created = false)
 				{

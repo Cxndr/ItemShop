@@ -1,5 +1,6 @@
-// depth system
-scr_tile_depth_reset();
+event_inherited();
+
+
 
 // run state machine
 switch (state_current)
@@ -16,7 +17,14 @@ state();
 face_dir = round_to_dir(direction);
 if (speed > 0) or (path_position != 1) {moving = true}
 else moving = false;
-if (moving = true)
+
+if (while_loop_limit_reached)
+{
+	moving = false;
+	face_dir = last_face_dir;
+}
+
+if (moving == true and while_loop_limit_reached == false)
 {
 	if		(direction >= 270)	{ set_anim("down"); }
 	else if (direction >= 180)	{ set_anim("left"); }
@@ -30,6 +38,8 @@ else
 	else if (face_dir >= 90)	{ set_anim("idle_up"); }
 	else						{ set_anim("idle_right"); }
 }
+
+last_face_dir = face_dir;
 
 //show_debug_message(name + " " + string(path));
 

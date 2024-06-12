@@ -3,7 +3,7 @@
 
 
 // get input
-key_select = keyboard_check_pressed(vk_enter);
+key_select = global.key_enter_pressed;
 
 // intro
 if (chosen_price) < 1 and (current_dialogue == intro)

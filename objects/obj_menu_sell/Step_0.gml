@@ -1,9 +1,9 @@
 // get input
-key_left = keyboard_check_pressed(ord("A"));
-key_right = keyboard_check_pressed(ord("D"));
-key_up = keyboard_check_pressed(ord("W"));
-key_down = keyboard_check_pressed(ord("S"));
-key_select = keyboard_check_pressed(vk_enter);
+key_left = global.key_left_pressed;
+key_right = global.key_right_pressed;
+key_up = global.key_up_pressed;
+key_down = global.key_down_pressed;
+key_select = global.key_enter_pressed;
 
 // get string length
 price_string_size = string_length(string(price));

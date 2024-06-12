@@ -7,7 +7,6 @@ selected_shopper = noone;
 selected_shopper_obj = noone;
 sell_menu_created = false;
 
-
 // functions
 function set_wait_timer()
 {
@@ -20,8 +19,7 @@ function end_sale_period()
 {
 	for (var _i=0; _i < ds_list_size(global.in_store_shopper_objects); _i++)
 	{
-		global.in_store_shopper_objects[|_i].leave_shop = true;
-		global.in_store_shopper_objects[|_i].name = true;
+		global.in_store_shopper_objects[|_i].leave_shop = true;	
 	}
 	obj_player.movement = true;
 }
@@ -29,14 +27,9 @@ function end_sale_period()
 
 function activate_sale_period()
 {
-	// for debug
-	show_debug_message(global.shopper_list);
-	show_debug_message("--- global.shopper_list ---");
-	for (_i=0; _i < ds_list_size(global.shopper_list); _i++)
-	{
-		show_debug_message(global.shopper_list[|_i]);	
-	}
-	show_debug_message("---------------------------");
+	show_debug_list(global.shopper_list);
+	
+	if (buyer_cycles_active) exit;
 	
 	obj_player.movement = false;
 	//// play bell ring sound
@@ -45,7 +38,6 @@ function activate_sale_period()
 	
 	// set buyer cycles
 	buyer_cycle_count = irandom_range(4,7); // make this go up with selling level once implemented
-	buyer_cycle_count = 2;
 	buyer_cycles_active = true;
 	set_wait_timer();
 	

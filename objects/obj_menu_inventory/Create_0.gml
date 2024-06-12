@@ -1,5 +1,4 @@
-// pause game
-pause_all([self]);
+pause_all([self, obj_input]);
 
 // options
 global.player_inventory.sort_name(true);

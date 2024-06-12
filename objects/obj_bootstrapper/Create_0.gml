@@ -14,6 +14,7 @@ instance_create_layer(0,0,"lighting",obj_light_surface);
 instance_create_layer(0,0,"game_instances", obj_npc_manager);
 instance_create_layer(0,0,"game_instances", obj_pathway);
 instance_create_layer(0,0,"game_instances", obj_dialogue_manager);
+instance_create_layer(0,0,"game_instances", obj_input);
 
 
 // setup sdf font effects

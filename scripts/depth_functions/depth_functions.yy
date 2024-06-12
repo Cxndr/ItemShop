@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"tile_depth",
+  "%Name":"depth_functions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"tile_depth",
+  "name":"depth_functions",
   "parent":{
     "name":"Depth System",
     "path":"folders/Depth System.yy",

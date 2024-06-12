@@ -1,4 +1,4 @@
-pause_all([self]);
+pause_all([self, obj_input]);
 
 // settings variables
 margin = 50;
