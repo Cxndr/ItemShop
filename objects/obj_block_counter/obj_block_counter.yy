@@ -35,5 +35,5 @@
     "path":"sprites/spr_block_counter/spr_block_counter.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

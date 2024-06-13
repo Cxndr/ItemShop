@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_barrel_lid",
   "bboxMode":0,
-  "bbox_bottom":31,
-  "bbox_left":2,
-  "bbox_right":29,
+  "bbox_bottom":15,
+  "bbox_left":1,
+  "bbox_right":14,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -17,7 +17,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":32,
+  "height":16,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"345b87be-0534-4673-8b3e-0c46e39937eb","blendMode":0,"displayName":"default","isLocked":false,"name":"345b87be-0534-4673-8b3e-0c46e39937eb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -90,5 +90,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":32,
+  "width":16,
 }
