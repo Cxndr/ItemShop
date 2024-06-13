@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block_floorobject",
+  "%Name":"obj_block_floorobj_tall",
   "eventList":[],
   "managed":true,
-  "name":"obj_block_floorobject",
+  "name":"obj_block_floorobj_tall",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_block_floorobject",
-    "path":"sprites/spr_block_floorobject/spr_block_floorobject.yy",
+    "name":"spr_block_floorobj_tall",
+    "path":"sprites/spr_block_floorobj_tall/spr_block_floorobj_tall.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

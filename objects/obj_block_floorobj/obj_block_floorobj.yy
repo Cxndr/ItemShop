@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block_counter",
+  "%Name":"obj_block_floorobj",
   "eventList":[],
   "managed":true,
-  "name":"obj_block_counter",
+  "name":"obj_block_floorobj",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_solid",
-    "path":"objects/obj_solid/obj_solid.yy",
+    "name":"obj_block",
+    "path":"objects/obj_block/obj_block.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_block_counter",
-    "path":"sprites/spr_block_counter/spr_block_counter.yy",
+    "name":"spr_block_floorobj",
+    "path":"sprites/spr_block_floorobj/spr_block_floorobj.yy",
   },
   "spriteMaskId":null,
   "visible":false,
