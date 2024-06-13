@@ -35,5 +35,5 @@
     "path":"sprites/spr_block_floorobj_tall/spr_block_floorobj_tall.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

@@ -37,8 +37,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"shop counter sprites",
-    "path":"folders/Shop Interiors/shop counter sprites.yy",
+    "name":"shop sprites",
+    "path":"folders/Shop Interiors/shop sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -12,9 +12,14 @@ function round_to_dir(_value)
 	return round(_value/90)*90;
 }
 
+
+function snap_to_grid_topleft(_value)
+{
+	return ((floor(_value / obj_pathway.grid_size)) * obj_pathway.grid_size);
+}
 function snap_to_grid(_value)
 {
-	return ((floor(_value / obj_pathway.grid_size)) * obj_pathway.grid_size) + (obj_pathway.grid_size/2);
+	return snap_to_grid(_value) + obj_pathway.grid_size/2;	
 }
 
 function show_debug_list(_list)

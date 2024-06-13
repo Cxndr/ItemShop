@@ -1,22 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_interior_item",
+  "%Name":"obj_magicpot",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_interior_item",
+  "name":"obj_magicpot",
   "overriddenProperties":[],
   "parent":{
-    "name":"Shop Interiors",
-    "path":"folders/Shop Interiors.yy",
+    "name":"shop objects",
+    "path":"folders/Shop Interiors/shop objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_interior",
-    "path":"objects/obj_interior/obj_interior.yy",
+    "name":"obj_shop_item",
+    "path":"objects/obj_shop_item/obj_shop_item.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_magicpot",
+    "path":"sprites/spr_magicpot/spr_magicpot.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

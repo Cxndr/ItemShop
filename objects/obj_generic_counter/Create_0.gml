@@ -1,6 +1,5 @@
-base_layer = layer; // store original layer for variable depth system
+event_inherited();
 
-image_speed = 0;
 tile_size = sprite_height;
 cx = x + sprite_width/2;
 cy = y + sprite_height/2;

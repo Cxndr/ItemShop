@@ -10,8 +10,5 @@ function scr_tile_depth_reset(){ // resets object depth back to original value
 
 function set_variable_depth()
 {
-	depth = layer_get_depth(base_layer) + 99 - self.bbox_bottom/10;
+	depth = layer_get_depth(base_layer) + 99 - self.bbox_bottom/5;
 }
-
-
-

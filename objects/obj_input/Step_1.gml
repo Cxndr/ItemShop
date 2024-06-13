@@ -10,3 +10,10 @@ global.key_right_pressed = keyboard_check_pressed(ord("D")) or keyboard_check_pr
 global.key_up_pressed = keyboard_check_pressed(ord("W")) or keyboard_check_pressed(vk_up);
 global.key_down_pressed = keyboard_check_pressed(ord("S")) or keyboard_check_pressed(vk_down);
 global.key_enter_pressed = keyboard_check_pressed(vk_enter);
+
+global.mouse_left = mouse_check_button(mb_left);
+global.mouse_left_pressed = mouse_check_button_pressed(mb_left);
+global.mouse_left_released = mouse_check_button_released(mb_left);
+global.mouse_right = mouse_check_button(mb_right);
+global.mouse_right_pressed = mouse_check_button_pressed(mb_right);
+global.mouse_right_released = mouse_check_button_released(mb_right);

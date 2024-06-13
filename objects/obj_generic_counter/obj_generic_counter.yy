@@ -13,7 +13,10 @@
     "name":"Shop Interiors",
     "path":"folders/Shop Interiors.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_interior",
+    "path":"objects/obj_interior/obj_interior.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

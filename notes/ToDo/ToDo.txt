@@ -1,6 +1,10 @@
  - variable shop objects item
  - magic pot: place on shop counter, clicking it activates shop edit mode.
+	- menu for this.
  - ledger: place on shop counter, clicking it shows shop records.
+ - make npc pathing browse choice more efficient. instead of using a while statement to reloop when we find
+	false reading. Just make a list of all viable locations and pick from there. Can just do a loop to check
+	location viability once. Much cleaner implementation and much more efficient overhead.
  
  [ LATER ]
  - *poof* animation when placing interiors

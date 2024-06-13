@@ -35,5 +35,5 @@
     "path":"sprites/spr_block_floorobj/spr_block_floorobj.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

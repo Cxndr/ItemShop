@@ -16,6 +16,8 @@ instance_create_layer(0,0,"game_instances", obj_pathway);
 instance_create_layer(0,0,"game_instances", obj_dialogue_manager);
 instance_create_layer(0,0,"game_instances", obj_input);
 
+// non persistent objects - (add to shop only once expanded out)
+instance_create_layer(0,0,"game_instances", obj_editmode);
 
 // setup sdf font effects
 font_enable_effects(fnt_debug, true, {
