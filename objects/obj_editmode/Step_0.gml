@@ -31,7 +31,7 @@ if (active == true)
 		var _hovered_block = collision_rectangle(
 								mouse_x_snap, mouse_y_snap,
 								mouse_x_snap + _sprite_w, mouse_y_snap + _sprite_h,
-								obj_block,false,true);
+								obj_block_interiors,false,true);
 		if (_hovered_object)
 		{
 			instance_destroy(_hovered_object);

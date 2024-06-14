@@ -53,6 +53,7 @@ global.item_category =
 	"BOOKS",
 	"FOOD",
 	"POTIONS",
+	"INTERIORS"
 ];
 for (var _i=0; _i < array_length(global.item_category); _i++) global.item_category[_i] = string_proper(global.item_category[_i]);
 

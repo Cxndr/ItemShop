@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block_floorobj",
+  "%Name":"obj_block_interiors",
   "eventList":[],
   "managed":true,
-  "name":"obj_block_floorobj",
+  "name":"obj_block_interiors",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_block_interiors",
-    "path":"objects/obj_block_interiors/obj_block_interiors.yy",
+    "name":"obj_block",
+    "path":"objects/obj_block/obj_block.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_block_floorobj",
-    "path":"sprites/spr_block_floorobj/spr_block_floorobj.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

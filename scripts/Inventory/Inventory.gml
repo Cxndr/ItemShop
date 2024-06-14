@@ -5,8 +5,8 @@ function Inventory() constructor
 	
 	function item_find(_item_struct) // ONLY FINDS EXACT INSTANCE! - use item_find_name instead.
 	{
-		item_position = ds_list_find_index(inventory_items,_item_struct);
-		return item_position >= 0 ? item_position : -1;
+		var _item_position = ds_list_find_index(inventory_items,_item_struct);
+		return _item_position >= 0 ? _item_position : -1;
 	}
 	
 	function item_find_name(_name) // returns id of name searched
@@ -26,31 +26,31 @@ function Inventory() constructor
 	function item_add(_item_struct,_quantity)
 	{
 		var _item_struct_name = _item_struct.name;
-		item_position = self.item_find_name(_item_struct_name);
-		if (item_position >= 0)
+		var _item_position = self.item_find_name(_item_struct_name);
+		if (_item_position >= 0)
 		{
-			inventory_items[|item_position].quantity += _quantity;
+			inventory_items[|_item_position].quantity += _quantity;
 		}
 		else
 		{
 			ds_list_add(inventory_items,_item_struct);
-			item_position = self.item_find_name(_item_struct.name);
-			inventory_items[|item_position].quantity = _quantity;
+			_item_position = self.item_find_name(_item_struct.name);
+			inventory_items[|_item_position].quantity = _quantity;
 		}
 	}
 	
 	function item_remove(_item_struct,_quantity)
 	{
 		
-		item_position = self.item_find_name(_item_struct.name);
-		if (item_position >= 0) // if item exists
+		var _item_position = self.item_find_name(_item_struct.name);
+		if (_item_position >= 0) // if item exists
 		{
-			inventory_items[|item_position].quantity -= _quantity;
+			inventory_items[|_item_position].quantity -= _quantity;
 		}
 
-		if (inventory_items[|item_position].quantity <= 0)
+		if (inventory_items[|_item_position].quantity <= 0)
 		{
-			ds_list_delete(inventory_items,item_position);
+			ds_list_delete(inventory_items,_item_position);
 		}
 	}
 	

@@ -9,6 +9,6 @@ else
 	image_index = contents.inventory_items[|0].icon;
 	image_alpha = 1;
 }
-image_alpha = 1;
+//image_alpha = 1;
 draw_self();
 
