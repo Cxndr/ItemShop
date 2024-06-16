@@ -44,7 +44,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.0.137",
+    "IDEVersion":"2024.4.1.152",
   },
   "name":"Item Shop",
   "resources":[
@@ -93,6 +93,7 @@
     {"id":{"name":"obj_pot","path":"objects/obj_pot/obj_pot.yy",},},
     {"id":{"name":"obj_restricted","path":"objects/obj_restricted/obj_restricted.yy",},},
     {"id":{"name":"obj_sensor_depth","path":"objects/obj_sensor_depth/obj_sensor_depth.yy",},},
+    {"id":{"name":"obj_shop_counter","path":"objects/obj_shop_counter/obj_shop_counter.yy",},},
     {"id":{"name":"obj_shop_item","path":"objects/obj_shop_item/obj_shop_item.yy",},},
     {"id":{"name":"obj_shop_till","path":"objects/obj_shop_till/obj_shop_till.yy",},},
     {"id":{"name":"obj_shop","path":"objects/obj_shop/obj_shop.yy",},},

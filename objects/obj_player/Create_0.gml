@@ -52,6 +52,7 @@ movement = true;
 
 // setup inventory
 global.player_inventory = new Inventory();
+global.player_inventory_filtered = new Inventory();
 global.player_inventory.item_add(new Banana(),20);
 global.player_inventory.item_add(new HealthPotion(),20);
 global.player_inventory.item_add(new WoodenShortsword(),20);
@@ -65,3 +66,9 @@ global.player_inventory.item_add(new Longsword(), 20);
 global.player_inventory.item_add(new WoodenStaff(), 20);
 global.player_inventory.item_add(new Burg(), 20);
 global.player_inventory.item_add(new DragonStaff(), 20); 
+global.player_inventory.item_add(new WoodDisplayCounter(), 20);
+global.player_inventory.item_add(new WoodShopCounter(), 20);
+global.player_inventory.item_add(new Barrel(), 20)
+global.player_inventory.item_add(new Crate(), 20);
+global.player_inventory.item_add(new Flower(), 20); 
+global.player_inventory.item_add(new VaseFlower(), 20);

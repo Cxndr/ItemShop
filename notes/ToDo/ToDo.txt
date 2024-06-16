@@ -8,3 +8,4 @@
  
  [ LATER ]
  - *poof* animation when placing interiors
+ - obj_menu_inventory: what if we have nothing in inventory? category checks fail atm.

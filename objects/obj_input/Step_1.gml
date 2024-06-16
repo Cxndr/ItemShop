@@ -17,3 +17,7 @@ global.mouse_left_released = mouse_check_button_released(mb_left);
 global.mouse_right = mouse_check_button(mb_right);
 global.mouse_right_pressed = mouse_check_button_pressed(mb_right);
 global.mouse_right_released = mouse_check_button_released(mb_right);
+
+global.key_esc = keyboard_check(vk_escape);
+global.key_esc_pressed = keyboard_check_pressed(vk_escape);
+global.key_esc_released = keyboard_check_released(vk_escape);

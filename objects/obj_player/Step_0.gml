@@ -126,13 +126,16 @@ if (interacting_counter != noone and interacting_counter.object_index == obj_cou
 	draw_counter_sel = true;
 	instance_destroy(counter_sel);
 	counter_sel = instance_create_depth(interacting_counter.x, interacting_counter.y, interacting_counter.depth, obj_counter_sel);
-	with (counter_sel) depth = depth-1
+	with (counter_sel) depth -= 1;
 	if (_interact_key)
 	{
+		create_menu_inventory(MENU_TYPE.SELL_COUNTER);
+		/*
 		with instance_create_layer(x, y, "menus", obj_menu_inventory)
 		{
 			display_counter = other.interacting_counter;
 		}
+		*/
 	}
 }
 else 

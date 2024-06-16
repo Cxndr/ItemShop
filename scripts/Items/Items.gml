@@ -25,6 +25,7 @@ enum ITEM_CATEGORY
 	BOOKS,
 	FOOD,
 	POTIONS,
+	INTERIORS,
 	_LENGTH
 }
 global.item_category = 
@@ -249,4 +250,68 @@ function DragonStaff () : Staff () constructor
 	icon = 484;
 	atk_dmg = 4;
 	mgc_dmg = 16;
+}
+
+
+
+// INTERIORS
+function Interior () : Item () constructor
+{
+	category = ITEM_CATEGORY.INTERIORS;
+}
+
+	// Counters
+function WoodDisplayCounter () : Interior () constructor
+{
+	name = "Wooden Display Counter";
+	base_price = 1000;
+	price = base_price;
+	description  = "Wooden display counter used to display items for sale.";
+	object = obj_display_counter;
+	image_index = 0;
+}
+function WoodShopCounter () : Interior () constructor
+{
+	name = "Wooden Shop Counter";
+	base_price = 1500;
+	price = base_price;
+	description = "Wooden counter used to clerk.";
+	object = obj_shop_counter;
+	image_index = 0;
+}
+function Barrel () : Interior () constructor
+{
+	name = "Barrel";
+	base_price = 300;
+	price = base_price;
+	description = "Wooden barrel.";
+	object = obj_barrel;
+	image_index = 0;
+}
+function Crate () : Interior () constructor
+{
+	name = "Crate";
+	base_price = 300;
+	price = base_price;
+	description = "Wooden crate.";
+	object = obj_crate;
+	image_index = 0;
+}
+function Flower () : Interior () constructor
+{
+	name = "Potted Flower";
+	base_price = 500;
+	price = base_price;
+	description = "Potted flower.";
+	object = obj_flower;
+	image_index = 0;
+}
+function VaseFlower (): Interior () constructor
+{
+	name = "Flower Vase";
+	base_proce = 700;
+	price = base_price;
+	description = "Flower vase";
+	object = obj_vase_flower;
+	image_index = 0;
 }

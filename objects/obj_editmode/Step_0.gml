@@ -1,11 +1,20 @@
 var _activate_key = keyboard_check_pressed(ord("U"));
-if (_activate_key) active = !active;
+if (_activate_key)
+{
+	create_menu_inventory(MENU_TYPE.EDITMODE,ITEM_CATEGORY.INTERIORS);
+}
+
+//if (_activate_key) active = !active;
 
 
 if (active == true)
 {
-	var _sprite_h = selected_object.sprite_height;
-	var _sprite_w = selected_object.sprite_width;
+	if (global.key_esc_pressed) active = false;
+	
+	//var _sprite_h = selected_object.sprite_height;
+	var _sprite_h = sprite_get_height(object_get_sprite(selected_object));
+	//var _sprite_w = selected_object.sprite_width;
+	var _sprite_w = sprite_get_width(object_get_sprite(selected_object));
 	mouse_x_snap = snap_to_grid_topleft(mouse_x);
 	mouse_y_snap = snap_to_grid_topleft(mouse_y);
 	

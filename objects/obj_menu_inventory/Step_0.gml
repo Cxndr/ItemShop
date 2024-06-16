@@ -27,33 +27,14 @@ if (left_key or right_key) filter_options_cat();
 // execute selection
 if select_key
 {
-	var _display_item = display_counter.contents.inventory_items[|0];
-	
-	if options[|position].name = "Nothing"
-	{
-		if !display_counter.contents.is_empty() // if no display item dont do anything
-		{
-			global.player_inventory.item_add(_display_item,1);
-			display_counter.contents.clear();
-		}
-		ds_list_delete(options, 0); // delete "nothing" option.
-	}
-	else
-	{
-		if !display_counter.contents.is_empty()
-		{
-			global.player_inventory.item_add(_display_item,1);
-			display_counter.contents.clear();
-		}
-		display_counter.contents.item_add(variable_clone(options[|position]),1);
-		global.player_inventory.item_remove(options[|position],1);
-		ds_list_delete(options, 0); // delete "nothing" option.
-	}
+	unpause_all();
+	exit_function();
+	ds_list_delete(options, 0); // delete "nothing" option.
 
 	// on close
 	global.inventory_pos = position;
 	//if (option_len <= 1) global.inventory_pos = 0; // removed because going to pos 1 is actually good for spam placing across multiple categories
 	global.category_pos = cat_pos;
 	instance_destroy(self);
-	unpause_all();
+
 }

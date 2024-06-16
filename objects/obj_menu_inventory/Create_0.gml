@@ -1,8 +1,8 @@
-pause_all([self, obj_input]);
+pause_all([self, obj_input, obj_editmode]);
 
 // options
-global.player_inventory.sort_name(true);
-options_full = global.player_inventory.inventory_items;
+global.player_inventory_filtered.sort_name(true);
+options_full = global.player_inventory_filtered.inventory_items;
 option_full_len = ds_list_size(options_full);
 options = ds_list_create();
 
@@ -16,8 +16,11 @@ cat_list = array_unique(cat_list);
 array_sort(cat_list,true);
 cat_pos = global.category_pos;
 cat_len = array_length(cat_list);
+show_debug_message(cat_pos);
+show_debug_message(cat_len);
 if (cat_pos >= cat_len) cat_pos = cat_len -1;
-cat_selection = cat_list[cat_pos];
+if (cat_len > 0) cat_selection = cat_list[cat_pos];
+else cat_selection = 0;
 function filter_options_cat()
 {
 	ds_list_clear(options);
@@ -76,4 +79,4 @@ if (position >= option_len) position = option_len -1;
 display_counter = 0;
 lower_pos = 0;
 upper_pos = lower_pos + (list_size-1);
-
+exit_function = -1;
