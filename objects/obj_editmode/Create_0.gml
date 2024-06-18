@@ -8,3 +8,6 @@ display_objectpreview = false;
 display_delete = false;
 mouse_x_snap = 0;
 mouse_y_snap = 0;
+sprite_h = 0;
+sprite_w = 0;
+

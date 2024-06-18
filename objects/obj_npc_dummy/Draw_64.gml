@@ -6,5 +6,5 @@ draw_set_color(c_white);
 draw_set_alpha(1);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-var _debug_string = string(name) + " ds: " + string(depth_sensored);
+var _debug_string = "";
 draw_text(_x, _y-60, _debug_string);

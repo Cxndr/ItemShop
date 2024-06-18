@@ -5,7 +5,14 @@
  - make npc pathing browse choice more efficient. instead of using a while statement to reloop when we find
 	false reading. Just make a list of all viable locations and pick from there. Can just do a loop to check
 	location viability once. Much cleaner implementation and much more efficient overhead.
+ - switch editmode to a struct based system instead of objects (see note in tep event).
+ - make objects we need to activate via player a child of obj_activatable. this way we can handle the
+	activation in the object and have code there rather than all inside the player object.
+ - we are currently using built-in camera and viewport to do window effect. can we create and use our
+	own camera object instead? just record application surface section and set to new surface. draw that
+	surface at the window.
  
  [ LATER ]
  - *poof* animation when placing interiors
  - obj_menu_inventory: what if we have nothing in inventory? category checks fail atm.
+
