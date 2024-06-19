@@ -57,7 +57,7 @@ else if (!tile_above and tile_below and !tile_left and tile_right and tile_below
 {
 	image_index = 11;
 }
-else if (!tile_above and tile_below and tile_left and tile_right)
+else if (!tile_above and tile_below and tile_left and tile_right and tile_below_left and tile_below_right)
 {
 	image_index = 12;
 }
@@ -70,7 +70,7 @@ else if (tile_above and !tile_below and !tile_left and tile_right and tile_above
 	image_index = 14;
 	draw_legs(legs_left);
 }
-else if (tile_above and !tile_below and tile_left and tile_right)
+else if (tile_above and !tile_below and tile_left and tile_right and tile_above_left and tile_above_right)
 {
 	image_index = 15;
 	draw_legs(legs_middle);
@@ -80,19 +80,39 @@ else if (tile_above and !tile_below and tile_left and !tile_right and tile_above
 	image_index = 16;
 	draw_legs(legs_right);
 }
-else if (tile_above and tile_below and !tile_left and tile_right)
+else if (tile_above and tile_below and !tile_left and tile_right and tile_above_right and tile_below_left)
 {
 	image_index = 17;
 }
-else if (tile_above and tile_below and tile_left and !tile_right)
+else if (tile_above and tile_below and tile_left and !tile_right and tile_above_left and tile_below_left)
 {
 	image_index = 18;
 }
-else if (tile_above and tile_below and tile_left and tile_right)
+else if (tile_above and tile_below and tile_left and tile_right and tile_above_left and tile_above_right and tile_below_left and tile_below_right)
 {
 	image_index = 19;
 }
-
+else if (tile_above and tile_below and tile_left and !tile_right and !tile_above_left and !tile_below_left)
+{
+	image_index = 20;	
+}
+else if (tile_above and tile_below and !tile_left and tile_right and !tile_above_right and !tile_below_right)
+{
+	image_index = 21;	
+}
+else if (tile_above and !tile_below and tile_left and tile_right and !tile_above_left and !tile_above_right)
+{
+	image_index = 22;
+	draw_legs(legs_middle);
+}
+else if (!tile_above and tile_below and tile_left and tile_right and !tile_below_left and !tile_below_right)
+{
+	image_index = 23;	
+}
+else if (tile_above and tile_below and tile_left and tile_right and !tile_above_left and !tile_above_right and !tile_below_left and !tile_below_right)
+{
+	image_index = 24;
+}
 
 draw_self();
 

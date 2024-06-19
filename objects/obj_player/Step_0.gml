@@ -125,7 +125,7 @@ if (interacting_counter != noone and interacting_counter.object_index == obj_cou
 {
 	draw_counter_sel = true;
 	instance_destroy(counter_sel);
-	counter_sel = instance_create_depth(interacting_counter.x, interacting_counter.y, interacting_counter.depth, obj_counter_sel);
+	counter_sel = instance_create_depth(interacting_counter.x, interacting_counter.y+1, interacting_counter.depth, obj_counter_sel);
 	with (counter_sel) depth -= 1;
 	if (_interact_key)
 	{

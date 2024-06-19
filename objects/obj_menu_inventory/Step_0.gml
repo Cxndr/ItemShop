@@ -20,15 +20,19 @@ if (position > upper_pos) { lower_pos += 1; upper_pos += 1; }
 if (position < lower_pos) { lower_pos -= 1; upper_pos -= 1; }
 
 // category selection
-cat_selection = cat_list[cat_pos];
-if (left_key or right_key) filter_options_cat();
+if (cat_len > 0)
+{
+	cat_selection = cat_list[cat_pos];
+	if (left_key or right_key) filter_options_cat();
+}
 
 
 // execute selection
-if select_key
+if (select_key)
 {
 	unpause_all();
 	exit_function();
+	
 	ds_list_delete(options, 0); // delete "nothing" option.
 
 	// on close

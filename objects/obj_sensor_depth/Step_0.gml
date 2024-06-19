@@ -79,7 +79,7 @@ var _coli = instance_place_list(x, y, obj_all_chars, _lista, true);
 for(var _i = 0; _i < ds_list_size(_lista); _i++)
 {	
 //Putting the same depth as the layer		//Why 99 ? when you create a new layer it adds +100 depth so i added 99 here to be able to do the next part.      
-	_lista[|_i].depth = layer_get_depth("counters") + 99 - _lista[|_i].bbox_bottom/10;
+	_lista[|_i].depth = layer_get_depth("below_tiles") + 99 - _lista[|_i].bbox_bottom/10;
 														//Why this part ?
 														//R:  Imagine again if your player and the NPC are together with the sensor, 
 														//    well we want that if one of them is a little above it is at the bottom and the other at the top.

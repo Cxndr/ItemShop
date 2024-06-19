@@ -14,10 +14,10 @@ tile_below_left = false;
 tile_below_right = false;
 
 // draw legs
-legs_single = 20;
-legs_left = 21;
-legs_middle = 22;
-legs_right = 23;
+legs_single = 25;
+legs_left = 26;
+legs_middle = 27;
+legs_right = 28;
 
 function draw_legs(_index)
 {

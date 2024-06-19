@@ -6,12 +6,13 @@ enum MENU_TYPE
 
 
 function create_menu_inventory(_menutype) // create seperate functions for _except and _only ??
-{			
+{	
+	
 	var _inv_list = global.player_inventory.inventory_items;
+	var _filtered_list = global.player_inventory_filtered.inventory_items;
 	global.player_inventory_filtered.clear();
 	if (argument_count > 1)
 	{
-		var _filtered_list = global.player_inventory_filtered.inventory_items;
 		for (var _i=0; _i < ds_list_size(_inv_list); _i++)
 		{
 			for (var _j=1; _j < argument_count; _j++)
@@ -25,7 +26,10 @@ function create_menu_inventory(_menutype) // create seperate functions for _exce
 	}
 	else
 	{
-		global.player_inventory_filtered.inventory_items = global.player_inventory.inventory_items;
+		for (var _i=0; _i < ds_list_size(_inv_list); _i++)
+		{
+			ds_list_add(_filtered_list, _inv_list[|_i]);
+		}
 	}
 	
 	with instance_create_layer(x, y, "menus", obj_menu_inventory)
