@@ -2,6 +2,8 @@
 
 ### Recettear inspired game in a 2D pixel style with a fully customizable shop space and recettear-style customer day cycle.
 
+**Status:** Work in progress _(Core features implemented but no playable executable.)_
+
 ## Features
  - Customizable shop - _draw in_ shop counters and other furniture items anywhere you please.
  - Sell to customer who visit your shop in a rotating day cycle.
